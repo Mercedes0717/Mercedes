@@ -14,37 +14,55 @@
     </head>
     <body style="background-color: black;">
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown link
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+              <a class="navbar-brand" href="#">
+                <img src="image/LOGO.png" alt="Logo" width="150" height="50" class="d-inline-block align-text-top">
+              </a>
             </div>
           </nav>
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">메인 페이지</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">기본 정보</a>
+              </li>              
+              <li class="nav-item">
+                <a class="nav-link" href="#">챔피언</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">패치노트</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">새소식</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  고객 지원
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="키워드 검색">
+              <input class="form-control me-2" type="키워드 검색" placeholder="키워드 검색" aria-label="키워드 검색">
+              <button class="btn btn-outline-success" type="submit">검색하기</button>
+            </form>
+          </div>
+        </div>
+      </nav>
 
         <div style="display: flex; justify-content: center;">
             <style>
@@ -53,38 +71,39 @@
                     color: white;
                 }
             </style>
-            <img src="image/LOGO.png" width="200" height="60">
-            <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white;"><a href="https://www.leagueoflegends.com/ko-kr/how-to-play/" target="_blank">게임정보</a>챔피언 패치노트 새소식 등 (메뉴 정보 입력하기)</h3>
         </div>
         <div style="display: flex; justify-content: center;">
-        <a href="Index.html" target="_blank"><img src="image/Main.jpg" width="1200" height="768"></a>
+        <a href="Index.html" target="_blank"><img src="image/Main.jpg" width="1200" height="768" u2 class= "img-fluid"></u2></a>
         </div>
         <div style="display: flex; justify-content: center;">
-        <table style="display: flex; justify-content: center;">
-            <table border="1">
-                  <caption>인기 캐릭터</caption>
-                  <tbody>
-                    <tr bgcolor="red">
-                        <td width="80" rowspan="1">사이온</td>
-                        <td>아리</td>
-                        <td>가렌</td>
-                        <td>가렌2</td>
-                        <td>가렌3</td>
-                    </tr>
-                    <tr bgcolor="grey">
-                        <td><a href="https://www.leagueoflegends.com/ko-kr/" target="_blank">롤 웹사이트 접속하기</a></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></a></td>
-                    </tr>
+          <table class ="table" table style="display: flex; justify-content: center;">
+              <thead>
                 <tr>
-                    <td bgcolor="blue"><b>카직스</b></td>
-                        <td>루시안</td>
-                        <td>루시안2</td>
-                        <td colspan="2"><font size="13"><img src="image/bye.png" width="100" height="50">바이1,  2</font></td>
-                    </tr>
-                </tbody>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
             </table>
         </div>
         <hr>
