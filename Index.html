@@ -12,7 +12,7 @@
         <meta name ="keywords" content="computer">
         <base href="http://127.0.0.1:5500">
     </head>
-    <body style="background-color: black;">
+    <body style="background-color: black;" onload="pop_up();"></body>
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
@@ -56,9 +56,9 @@
                 </ul>
               </li>
             </ul>
-            <form class="d-flex" role="키워드 검색">
-              <input class="form-control me-2" type="키워드 검색" placeholder="키워드 검색" aria-label="키워드 검색">
-              <button class="btn btn-outline-success" type="submit">검색하기</button>
+            <form class="d-flex" role="search" onsubmit="return googleSearch();">
+              <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력" aria-label="Search">
+              <button class="btn btn-outline-success" id="search_btn" type="submit">검색하기</button>
             </form>
           </div>
         </div>
@@ -111,4 +111,4 @@
             <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white; font-family:  '굴림';">라이엇 게임 회사 정보 2024년 3월 13일 작성됨</h3>
         </div>
     </body>
-</html>
+</html> 
