@@ -20,3 +20,15 @@ if (emailValue.length < 5) {
     alert('패스워드는 대소문자를 1개 이상 포함해야 합니다.');
     return false;
     }
+
+    function init(){ // 로그인 폼에 쿠키에서 가져온 아이디 입력
+        const emailInput = document.getElementById('typeEmailX');
+        const idsave_check = document.getElementById('idSaveCheck');
+        let get_id = getCookie("id");
+        if(get_id) {
+        emailInput.value = get_id;
+        idsave_check.checked = true;
+        }
+    }
+
+    <body class="text-center" onload="init();">
