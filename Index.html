@@ -1,121 +1,133 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LOL 메인화면</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <meta name ="author" content="20221024">
-        <meta name ="keywords" content="computer">
-        <base href="http://127.0.0.1:5500">
-    </head>
-    <body style="background-color: black;" onload="pop_up();"></body>
-
-      <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LOL 메인화면</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta name="author" content="20221024">
+    <meta name="keywords" content="computer">
+    <base href="http://127.0.0.1:5500">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .table-wrapper {
+            margin: 50px auto;
+            width: 80%;
+            background-color: #2c2c2c;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .table thead th {
+            background-color: #444;
+            color: #fff;
+        }
+        .table tbody tr:nth-of-type(even) {
+            background-color: #3a3a3a;
+        }
+        .table tbody tr:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-          <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="image/LOGO.png" alt="Logo" width="150" height="50" class="d-inline-block align-text-top">
-              </a>
-            </div>
-          </nav>
-          <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">메인 페이지</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">기본 정보</a>
-              </li>              
-              <li class="nav-item">
-                <a class="nav-link" href="#">챔피언</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">패치노트</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">새소식</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  고객 지원
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="image/LOGO.png" alt="Logo" width="150" height="50" class="d-inline-block align-text-top">
+                    </a>
+                </div>
+            </nav>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">메인 페이지</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">기본 정보</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">챔피언</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">패치노트</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">새소식</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login/profile.html">개인 프로필</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            고객 지원
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
                 </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search" onsubmit="return googleSearch();">
-              <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력" aria-label="Search">
-              <button class="btn btn-outline-success" id="search_btn" type="submit">검색하기</button>
-              <a href="login/login.html" class="btn btn-outline-success" id="login_btn">로그인 하기</a>
-            </form>
-          </div>
+                <form class="d-flex" role="search" onsubmit="return googleSearch();">
+                    <input class="form-control me-2" id="search_input" name="q" type="search" placeholder="키워드 입력" aria-label="Search">
+                    <button class="btn btn-outline-success" id="search_btn" type="submit">검색하기</button>
+                    <a href="login/login.html" class="btn btn-outline-success" id="login_btn">로그인 하기</a>
+                </form>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-        <div style="display: flex; justify-content: center;">
-            <style>
-                table {
-                    font-size: 20pt;
-                    color: white;
-                }
-            </style>
-        </div>
-        <div style="display: flex; justify-content: center;">
-        <a href="Index.html" target="_blank"><img src="image/Main.jpg" width="1200" height="768" u2 class= "img-fluid"></u2></a>
-        </div>
-        <div style="display: flex; justify-content: center;">
-          <table class ="table" table style="display: flex; justify-content: center;">
-              <thead>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <a href="Index.html" target="_blank">
+            <img src="image/Main.jpg" width="1200" height="768" class="img-fluid">
+        </a>
+    </div>
+
+    <div class="table-wrapper">
+        <table class="table table-dark table-hover">
+            <thead>
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
+                    <th scope="col">#</th>
+                    <th scope="col">챔피언</th>
+                    <th scope="col">포지션</th>
+                    <th scope="col">인기순위</th>
                 </tr>
-              </thead>
-              <tbody>
+            </thead>
+            <tbody>
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                    <th scope="row">1</th>
+                    <td>야스오</td>
+                    <td>바이</td>
+                    <td>다리우스</td>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
                 </tr>
-              </tbody>
-            </table>
-        </div>
-        <hr>
-        <div style="display: flex; justify-content: center;">
-            <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white; font-family:  '굴림';">라이엇 게임 회사 정보 2024년 3월 13일 작성됨</h3>
-        </div>
-    </body>
-</html> 
+            </tbody>
+        </table>
+    </div>
 
-
-
-<button class="btn btn-outline-success" type="submit" onclick="location.href='join.html'">회원가입</button>
-
-<input class="btn btn-primary btn-lg" onclick="join()" type="button" id="join_btn" value="회원 가입!" 
+    <div style="display: flex; justify-content: center;">
+        <h3 style="font-size: 24px; font-weight: bold; font-style: italic; color: white; font-family: '굴림';">라이엇 게임 회사 정보 2024년 3월 13일 작성됨</h3>
+    </div>
+</body>
+</html>
